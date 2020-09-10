@@ -53,6 +53,13 @@ public class PDFImage: PDFDocumentObject {
      Optional corner radius, is used if the `options` are set.
      */
     public var cornerRadius: CGFloat?
+    
+    /**
+     Optional closure to manipulate the final, resized image before drawing
+     - parameter CGContext: the image context
+     - parameter CGRect: the image frame
+     */
+    public var willBeginDrawing: ((CGContext, CGRect)->())? = nil
 
     /**
      Initializer to create a PDF image element.
