@@ -17,7 +17,7 @@ public class PDFContext {
         case scaleBy(x: CGFloat, y: CGFloat)
     }
 
-    private let cgContext: CGContext
+    let cgContext: CGContext
 
     internal private(set) var currentPageContainsDrawnContent = false
     internal private(set) var hasActivePage = false

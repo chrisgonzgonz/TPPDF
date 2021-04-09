@@ -126,7 +126,7 @@ internal class PDFImageObject: PDFRenderObject {
         #endif
         if let cgImage = cgImage {
             context.draw(image: cgImage, in: frame, flipped: true)
-            image.willBeginDrawing?(context, frame)
+            image.willBeginDrawing?(context.cgContext, frame)
         }
 
         applyAttributes(in: context)
